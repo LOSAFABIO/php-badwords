@@ -4,11 +4,13 @@
 
     $lunghezzaTesto = strlen($testo);
 
-    $parolaCensurata = $_GET["error"];
+    $parolaCensurata = $_GET["search"];
+
+    var_dump($parolaCensurata); 
 
     $censura = "***";
     
-    $testo =  str_replace($parolaCensurata, $censura, $testo); 
+    $Newtesto =  str_replace($parolaCensurata, $censura, $testo); 
 
 ?>
 
@@ -24,11 +26,11 @@
         
     <h3>
         Lunghezza del testo : 
-        <?php echo $lunghezzaTesto?>        
+        <?php echo $lunghezzaTesto; ?>        
         parole
     </h3>
     <h1>
-        <?php echo $testo ?>        
+        <?php echo $Newtesto; ?>        
     </h1>
 
 </body>
